@@ -8,9 +8,18 @@
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 20px;
+            padding: 0;
             box-sizing: border-box;
-            text-align: center; /* 追加: ページ全体を中央揃えに */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+        .container {
+            width: 90%;
+            max-width: 600px;
+            padding: 20px;
         }
         .modal {
             display: none;
@@ -31,7 +40,7 @@
             width: 90%;
             max-width: 600px;
             box-sizing: border-box;
-            text-align: left; /* モーダル内のテキストは左揃えのまま */
+            text-align: left;
         }
         .close {
             color: #aaa;
@@ -87,10 +96,11 @@
     </style>
 </head>
 <body>
-    
-    <h2>サービス利用規約</h2>
-    <p>サービス利用前（購入前）に同意事項をご確認ください。</p>
-    <button id="openModalButton" onclick="openModal()">同意事項を確認する</button>
+    <div class="container">
+        <h2>サービス利用規約</h2>
+        <p>サービス利用前（購入前）に同意事項をご確認ください。</p>
+        <button id="openModalButton" onclick="openModal()">同意事項を確認する</button>
+    </div>
     
     <div id="myModal" class="modal">
         <div class="modal-content">
