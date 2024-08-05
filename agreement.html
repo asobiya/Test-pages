@@ -67,6 +67,19 @@
         .checkbox-container {
             margin-bottom: 15px;
             font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .checkbox-container input[type="checkbox"] {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .checkbox-label {
+            user-select: none;
         }
         .button-container {
             margin-top: 15px;
@@ -131,12 +144,10 @@
                 <p>本同意事項に加えて、<a href="https://asobiya.xyz/terms" target="_blank">利用規約</a>にも同意していただく必要があります。利用規約をよくお読みいただき、内容をご理解の上、同意してください。</p>
             </div>
             <div class="agreement-section">
-                <div class="checkbox-container">
-                    <label>
-                        <input type="checkbox" id="agreeCheckbox" onclick="toggleButton()">
-                        同意事項を読み、理解しました
-                    </label>
-                </div>
+                <label class="checkbox-container">
+                    <input type="checkbox" id="agreeCheckbox" onclick="toggleButton()">
+                    <span class="checkbox-label">同意事項を読み、理解しました</span>
+                </label>
                 <div class="button-container">
                     <button id="submitButton" disabled onclick="closeModalAndRedirect()">同意して進む</button>
                 </div>
