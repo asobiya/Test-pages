@@ -110,7 +110,13 @@
         }
 
         function redirect() {
-            window.location.href = 'https://asobiya.xyz/membership';
+            try {
+                // iframeの外側のページを変更
+                window.parent.location.href = 'https://asobiya.xyz/membership';
+            } catch (e) {
+                // 直接開かれている場合や、セキュリティ制限がある場合は通常のリダイレクトを試みる
+                window.location.href = 'https://asobiya.xyz/membership';
+            }
         }
     </script>
 </body>
