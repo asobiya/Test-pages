@@ -5,16 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>同意事項確認</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        html, body {
+            height: 100%;
             margin: 0;
             padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
             box-sizing: border-box;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
             text-align: center;
+            min-height: 100%;
         }
         .container {
             width: 90%;
@@ -98,7 +101,7 @@
 <body>
     <div class="container">
         <h2>サービス利用規約</h2>
-        <p>サービス利用前（NFT購入前）に同意事項をご確認ください。</p>
+        <p>サービス利用前（購入前）に同意事項をご確認ください。</p>
         <button id="openModalButton" onclick="openModal()">同意事項を確認する</button>
     </div>
     
